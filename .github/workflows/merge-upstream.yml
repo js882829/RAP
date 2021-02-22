@@ -11,7 +11,7 @@ name: Merge-upstream
 on:
   push:
     branches: 
-      - master
+      - master_internet
   schedule:
     - cron: 30 6 * * *
   watch:
@@ -52,5 +52,5 @@ jobs:
 
     - name: Push Commits
       env:
-        DOWNSTREAM_BRANCH: master
+        DOWNSTREAM_BRANCH: master_internet
       run: git push origin $DOWNSTREAM_BRANCH
